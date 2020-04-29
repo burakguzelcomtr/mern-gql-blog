@@ -1,2 +1,1 @@
-# mern-grapgql-blog
-# checked
+# MERN + Graphql Blog
