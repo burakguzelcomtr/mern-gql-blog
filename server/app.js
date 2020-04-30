@@ -1,8 +1,17 @@
 //server app
 const express = require('express');
+const expressGraphQL = require('express-graphql');
+const schema = require('./schema/schema.js');
 
 const app = express();
+const port = 8000;
 
-app.listen(8000, ()=>{
-    console.log('Server çalışıyor...'); 
+// Middleware with graphql endpoint
+app.use('/graphql', expressGraphQL({
+    schema,
+    graphiql: true
+}));
+
+app.listen(port, ()=>{
+    // console.log('Server çalışıyor...'); 
 });
