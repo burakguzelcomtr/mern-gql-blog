@@ -1,2 +1,8 @@
 //server app
-console.log("hello mello")
+const express = require('express');
+
+const app = express();
+
+app.listen(8000, ()=>{
+    console.log('Server çalışıyor...'); 
+});
